@@ -1,6 +1,6 @@
 '''
 Time: O(N) 
-Space: O(N) 
+Space: O(1) 
 '''
 class Solution:
   def takeCharacters(self, s: str, k: int) -> int:
