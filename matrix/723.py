@@ -62,8 +62,6 @@ class Solution:
 
         brute force -> in-place 
         '''
-        row, col = len(board), len(board[0])
-
         while not self.crushCandies(board):
             self.drop(board)
 
