@@ -4,6 +4,13 @@ class Solution:
         time: O(N)
         space: O(1) 
         solution: fast+slow pointer 
+
+        n = 2 
+        1 -> 2 -> 3 -> 4 -> None 
+             ^              ^ 
+             s              f 
+            
+        1 -> 2 -> 4 
         '''
         dummy = ListNode(0)
         dummy.next = head 

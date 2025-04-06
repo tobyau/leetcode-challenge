@@ -2,7 +2,9 @@ class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         '''
         DFS if cell matches first letter of the word 
-        Time: O(n * m * 3^L) -> lenght of board * 3 directions since we won't go back to previous cells  
+        similar to find islands 
+
+        Time: O(n * m * 3^L) -> length of board * 3 directions since we won't go back to previous cells  
         Space: O(word)
         '''
         def withinBounds(r, c):

@@ -6,16 +6,17 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         '''
-        2 pointers: add numbers as long as l1 or l2 or carry exists 
+        add numbers as long as l1 or l2 or carry exists 
 
         Time: O(l1 + l2) 
         Space: O(N) 
         '''
-        carry = 0
-        res = ListNode(0) 
-        curr = res 
+        head = ListNode(0) 
+        dummy = head 
+        carry = 0 
 
-        while l1 or l2 or carry:
+        while l1 or l2 or carry: 
+            # keep adding as long as these numbers exist 
             val1 = l1.val if l1 else 0 
             val2 = l2.val if l2 else 0 
 
@@ -23,11 +24,10 @@ class Solution:
             digit = total % 10 
             carry = total // 10 
 
-            curr.next = ListNode(digit) 
-            curr = curr.next 
+            dummy.next = ListNode(digit) 
 
+            dummy = dummy.next 
             if l1: l1 = l1.next 
             if l2: l2 = l2.next 
-        
-        return res.next 
-        
+          
+        return head.next 

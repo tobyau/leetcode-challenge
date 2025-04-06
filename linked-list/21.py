@@ -5,6 +5,16 @@
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        '''
+        assign dummy head next to lowest val beween list1 / list2 
+
+        edge case: lists will have extra at the tail 
+        - assign dummy next to the list 
+        - will be None if lists are at the end, nbd 
+
+        Time: O(N) -> shorter list 
+        Space: O(list1 + list2) -> merging 2 lists 
+        '''
         head = ListNode(0) 
         temp = head 
 
